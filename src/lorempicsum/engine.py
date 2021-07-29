@@ -40,12 +40,12 @@ def progressbar(iterable: Iterable, prefix="", size=60, file=sys.stdout):
     file.write("\n")
     file.flush()
 
-def download_images(master_seed: int, n_images: int, image_directory="./img") -> None:
+def download_images(master_seed: int, n_images: int, image_directory="./img", size=300) -> None:
     """ Initates and manages the flow of downloads """
     seeds = generate_seeds(master_seed, n_images)
     for i in progressbar(range(n_images), f"Downloading images to '{image_directory}':", 35):
         seed = seeds[i]
-        url = get_image_url(seed)
+        url = get_image_url(seed, size)
         filepath = os.path.join(image_directory, f"{seed}.jpg")
         urlretrieve(url, filepath)
     return

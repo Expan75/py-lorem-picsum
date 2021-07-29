@@ -13,7 +13,8 @@ Assuming you have Python3 installed, simply use the package manager [pip](https:
     python -m lorempicsum \
         --folder myimages \
         --number 100 \ 
-        --seed 42
+        --seed 42 \
+        --size 300
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
