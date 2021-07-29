@@ -6,6 +6,6 @@ parser.add_argument('-n', '--number', help='Specify how many images you want to 
 parser.add_argument('-s', '--seed', type=int,
     help='Used to ensure the same images are downloaded. Useful for reproduction of experiements and datasets')
 args = parser.parse_args()
-assert args.number and args.seed, 'Please provide how many images you want to download and a seed to ensure replication!'
 
- 
+if not args.number or not args.seed: 
+    raise RuntimeError('Please provide both an integer for the number of images to download, as well as an integer seed to ensure replication!')
