@@ -8,4 +8,4 @@ parser.add_argument('-s', '--seed', type=int,
 args = parser.parse_args()
 
 if not args.number or not args.seed: 
-    raise RuntimeError('Please provide both an integer for the number of images to download, as well as an integer seed to ensure replication!')
+    raise RuntimeError('Please provide both an integer for the number of images to download, as well as an integer seed to ensure replication! See --help for more information on arguments.')
