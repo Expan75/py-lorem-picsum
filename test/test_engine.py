@@ -29,8 +29,7 @@ class TestSeedGeneration(unittest.TestCase):
         self.assertTrue(sorted(self.generated_seeds) == self.generated_seeds)
     
     def test_uniqueness(self):
-        unique_seeds = set(self.generated_seeds)
-        self.assertTrue(len(unique_seeds) == len(self.generated_seeds))
+        self.assertTrue(len(set(self.generated_seeds)) == len(self.generated_seeds))
 
 
 class TestDirectoryValidation(unittest.TestCase):
@@ -53,7 +52,14 @@ class TestDirectoryValidation(unittest.TestCase):
         self.assertTrue(os.path.isdir(self.tmp_directory))
         engine.verify_valid_directory(self.tmp_directory)
         self.assertTrue(os.path.isdir(self.tmp_directory))
-        
+
+    def test_response_when_dir_non_empty(self):
+        filepath = os.path.join(self.tmp_directory, 'example.jpg')
+        os.makedirs(self.tmp_directory)
+        with open(filepath, '+w') as f:
+            f.write('hello im a jpg')
+        self.assertRaises(engine.DirectoryAlreadyContainsPhotosExecption, engine.verify_valid_directory, self.tmp_directory)
+
 
 class TestDownloadImages(unittest.TestCase):
 
