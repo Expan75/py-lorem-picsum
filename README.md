@@ -10,7 +10,7 @@ Assuming you have Python3 installed, simply use the package manager [pip](https:
 
 ## Usage
 
-    python lorem_picsum.py \
+    python -m lorempicsum \
         --folder myimages \
         --number 100 \ 
         --seed 42
