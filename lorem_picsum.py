@@ -1,7 +1,13 @@
-import os
 from engine import download_images
+from util import verify_valid_directory
 
-if __name__ == "__main__":
-    image_dir = "img"
-    os.makedirs(image_dir, exist_ok=True)
-    download_images(master_seed=1337, n_images=5, image_directory=image_dir)
+def run_as_tool():
+    from cli import args
+
+    seed, n_images, image_dir = args.seed, args.number, args.folder 
+
+    verify_valid_directory(image_dir)
+    download_images(master_seed=seed, n_images=n_images, image_directory=image_dir)
+
+if __name__ == '__main__':
+    run_as_tool()
