@@ -6,7 +6,7 @@ I would use this in image labeling ML tasks to ensure that my model can adequate
 ## Installation
 Assuming you have Python3 installed, simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install py-lorem-picsum.
 
-    pip install py-lorem-picsum
+    pip install lorempicsum
 
 ## Usage
 
