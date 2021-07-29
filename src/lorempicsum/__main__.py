@@ -1,3 +1,1 @@
-from .main import main
-
-main()
+import main
