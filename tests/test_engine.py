@@ -1,6 +1,6 @@
 import os
 import unittest
-import engine 
+from src.lorempicsum import engine
 
 
 class TestGetEndpoint(unittest.TestCase):

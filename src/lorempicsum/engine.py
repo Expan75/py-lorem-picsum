@@ -1,7 +1,7 @@
 import os
 import random
-from util import progressbar
 from typing import List
+from .util import progressbar
 from urllib.request import urlretrieve
 
 def get_image_url(seed: int, size=300, url="https://picsum.photos") -> str:

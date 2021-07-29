@@ -1,7 +1,7 @@
 # py-lorem-picsum
-https://picsum.photos is a brilliant API written by David Marby & Nijiko Yonskai. This library/tool is a little helper for downloading images in a easy and experimentally reproducable way.
+https://picsum.photos is a brilliant API written by David Marby & Nijiko Yonskai. This library/tool is a little helper for downloading images in a easy and experimentally reproducable way from their API.
 
-I would use this in image labeling machine learning tasks to ensure that my model can adequately detect non-relevant data.
+I would use this in image labeling ML tasks to ensure that my model can adequately detects non-relevant data.
 
 ## Installation
 Assuming you have Python3 installed, simply use the package manager [pip](https://pip.pypa.io/en/stable/) to install py-lorem-picsum.
